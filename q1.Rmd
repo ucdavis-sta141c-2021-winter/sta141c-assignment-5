@@ -9,7 +9,7 @@ Remark: use either classical bootstrap or bootstrap percentile confidence interv
 
 
 
-##### (b) There are 1000 rows of observations in "data.csv". Split the file into 10 parts and write a function `get_data` to read each part separately (i.e., given the value `i` between 1 and 10, write a function which reads the `(i-1) * 100 + 1` to `i * 100` rows)
+##### (b) There are 1000 rows of observations in "data.csv". Imagine that the file is split into 10 parts. Write a function `get_data` to read each part separately (i.e., given the value `i` between 1 and 10, write a function which reads the `(i-1) * 100 + 1` to `i * 100` rows directly from the file)
 
 
 ```{r}

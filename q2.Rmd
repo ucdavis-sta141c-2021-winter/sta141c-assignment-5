@@ -1,0 +1,80 @@
+---
+title: "Question 2"
+---
+
+In this question, you would use the `reticulate` package to write some python code.
+
+First make sure that you have `reticulate` and miniconda installed.
+
+```{r}
+library(reticulate)
+```
+
+Install `miniconda` if you haven't.
+```{r, eval = FALSE}
+install_miniconda()
+
+```
+Tell `reticulate` to use `miniconda`.
+```{r}
+use_miniconda(required = TRUE)
+```
+
+
+##### (a) Write a function `kendall_a` in python which caclulates Kendall Tau coorelation. Suppose `x` and `y` are two numpy arrays of the same length. For simplicity, assume that there are no missing values and ties (Tau-a coefficient).
+
+(Do not use functions such as `scipy.stats.kendalltau` or `pandas.DataFrame.corr`, write your own function!)
+
+
+```{python}
+def kendall_a(x, y):
+  
+  return tau
+
+```
+
+```{python}
+import numpy as np
+n = 10000
+x = np.random.rand(n)
+y = np.random.rand(n)
+kendall_a(x, y)
+```
+
+```{r}
+n <- 10000
+# R's array will be casted as Python's numpy array
+x <- as.array(runif(n))
+y <- as.array(runif(n))
+py$kendall_a(x, y)
+cor(x, y, method = "kendall")
+```
+
+##### (b) Recall part (a), but `x` and `y` may have ties now. (Tau-b coeffient)
+
+Hint: `np.unique(x, return_counts=True)`
+
+```{python}
+def kendall_b(x, y):
+  
+  return tau
+  
+```
+
+```{python}
+import numpy as np
+from math import floor
+n = 10000
+x = np.random.choice(floor(n * 0.9), n)
+y = np.random.choice(floor(n * 0.9), n)
+kendall_b(x, y)
+```
+
+```{r}
+n <- 10000
+# R's array will be casted as Python's numpy array
+x <- as.array(sample.int(floor(n * 0.9), n, replace = TRUE))
+y <- as.array(sample.int(floor(n * 0.9), n, replace = TRUE))
+py$kendall_b(x, y)
+cor(x, y, method = "kendall")
+```

@@ -1,0 +1,60 @@
+---
+title: "Question 3"
+---
+
+In this question, you are going to use `keras` to build a neural network to predict wheather an email of spam or not.
+
+
+```{r}
+library(reticulate)
+library(tidyverse)
+library(keras)
+```
+
+If you haven't done it yet, you would need to install the python package `keras`. 
+We are going to install it to the miniconda environment `r-tensorflow`. 
+(It requires you to install `miniconda` as indicated in q1.)
+
+
+```{r, eval = FALSE}
+install_keras("conda", conda = reticulate:::miniconda_conda(), envname = "r-tensorflow")
+```
+
+To use the environment. (You might need to restart the R session before running the below code.)
+```{r}
+use_miniconda("r-tensorflow", required = TRUE)
+```
+
+The data is from the package `kernlab`
+
+```{r}
+library(rsample)
+library(kernlab)
+data(spam)
+```
+Use `?spam` to see the documentation of the dataset.
+
+We first randomly split the data into training and testing set
+
+```{r}
+set.seed(141)
+nspam <- 1813
+nham <- 2788
+test <- c(sample(1:nspam, floor(nspam * 0.1)), sample(nspam + 1:nham, floor(nham * 0.1)))
+spam_train <- spam[-test, ]
+spam_test <- spam[test, ]
+```
+
+
+
+PS: You could use either python or R to answer the following questions.
+
+
+###### (a) Build a neural network on the variable `type` of the `spam_train` dataset.
+
+Hint: It is sufficient to use one hidden dense layer and one dropout layer.
+
+
+
+
+###### (b) Predict the email type for the records in `spam_test`. What is the misclassification rate?

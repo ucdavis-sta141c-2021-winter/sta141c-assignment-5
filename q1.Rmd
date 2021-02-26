@@ -1,0 +1,40 @@
+---
+title: "Question 1"
+---
+
+
+##### (a) Use bootstrap to construct a 95\% confidence interval for the coefficient determination $R^2$ of the file "data.csv" when `y` is regressed on `x`.
+
+Remark: use either classical bootstrap or bootstrap percentile confidence interval.
+
+
+
+##### (b) There are 1000 rows of observations in "data.csv". Split the file into 10 parts and write a function `get_data` to read each part separately (i.e., given the value `i` between 1 and 10, write a function which reads the `(i-1) * 100 + 1` to `i * 100` rows)
+
+
+```{r}
+get_data <- function(i) {
+
+}
+```
+
+
+##### (c) Write a function `get_coef` that returns the coefficient of determination $R^2$ when `y` is regressed on `x` using weighted least square with weights `w`'s. 
+
+Remark: you might either calculate it manually or by using base R functions.
+
+
+```{r}
+n <- 1000
+m <- 10
+# `n` is the size of the whole dataset
+w <- as.vector(rmultinom(1, n, rep(1, n / m)))
+
+get_coef <- function(x, y, w) {
+
+}
+```
+
+##### (d) Use the bag of little bootstraps algorithm (with 10 subsamples) to estimate a 95\% conficence interval for the $R^2$ of the file `data.csv`.
+
+Hints: Use `furrr` or otherwise to speed up computation by utilizing more than one core.

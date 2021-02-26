@@ -20,16 +20,12 @@ get_data <- function(i) {
 
 
 ##### (c) Write a function `get_coef` that returns the coefficient of determination $R^2$ when `y` is regressed on `x` using weighted least square with weights `w`'s. 
+(`w` has the same length as `x` and `y`)
 
 Remark: you might either calculate it manually or by using base R functions.
 
 
 ```{r}
-n <- 1000
-m <- 10
-# `n` is the size of the whole dataset
-w <- as.vector(rmultinom(1, n, rep(1, n / m)))
-
 get_coef <- function(x, y, w) {
 
 }

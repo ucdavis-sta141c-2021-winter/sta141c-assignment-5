@@ -4,7 +4,7 @@
 Instructions
 
 1. **Important** (Ignore this if you have done it for assignment 1) Tell us your github account at https://signin-apd27wnqlq-uw.a.run.app/sta141c/. This will allow us to fetch your assignments later. Failing to do so will result in a zero grade of the assignments.
-1. Accept the assignment via the link:
+1. Accept the assignment via the link: https://classroom.github.com/a/Ox4rDiTb
 1. A repo containing your username `sta141c-assignment-n-USERNAME` will be created.<br>
     The assignment will be created at https://github.com/ucdavis-sta141c-2021-winter
 1. Create a new RStudio project with the repo containing your username  (do not clone the template repo `sta141c-assignment-n`)

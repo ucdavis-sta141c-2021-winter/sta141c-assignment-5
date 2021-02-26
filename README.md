@@ -19,7 +19,7 @@ Visit https://happygitwithr.com/ for tutorials.
 
 
 Points: 12% of the course grade.
-Due Date: 2/21/2021 11:59 pm
+Due Date: 3/7/2021 11:59 pm
 
 
 ### How to fetch assignment revisions
